@@ -9,29 +9,31 @@ function initialSquares(squareContainer, SQUARE_CONTAINER_WIDTH_HEIGHT) {
     }
 }
 
-function modeButtons() {
-    const writeButton = document.getElementById('write-button');
-    const eraseButton = document.getElementById('erase-button');
-    const colorButton = document.getElementById('color-button');
-    writeButton.addEventListener('click', () => {
+function modes() {
+    const write = document.getElementById('write-button');
+    const erase = document.getElementById('erase-button');
+    const color = document.getElementById('color-button');
+    write.addEventListener('click', () => {
         mode = 'black';
     });
-    
-    eraseButton.addEventListener('click', () => {
+    erase.addEventListener('click', () => {
         mode = 'white';
     });
-    // colorButton.addEventListener('click', () => {
-    //     mode = Math.floor(Math.random()*16777215).toString(16);
-    // });   
+    color.addEventListener('click', () => {
+        mode = 'color';
+    });
 }
 
 // mouseover shade function
 function shade() {
     const gridCells = document.querySelectorAll('.square');
     gridCells.forEach((cell) => {
-        cell.style.color = 'blue';
         cell.addEventListener('mouseover', () => {
-            cell.setAttribute('style', `color: ${mode}`);
+            if (mode === 'color') {
+                cell.style.backgroundColor = 'blue';
+            } else {
+                cell.style.backgroundColor = mode;
+            }
         });
     });
 }
@@ -42,7 +44,7 @@ function main() {
     const SQUARE_CONTAINER_WIDTH_HEIGHT = 400; // fixed width and height of square container
     initialSquares(squareContainer, SQUARE_CONTAINER_WIDTH_HEIGHT); // displays the square container with the initial number of squares
     let mode;
-    modeButtons();
+    modes();
     shade();
 
     // slider

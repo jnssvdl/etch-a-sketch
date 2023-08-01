@@ -29,16 +29,17 @@ body {
 }
 
 .square {
-    border: 1px solid black;
     cursor: crosshair;
 }
 
 #black {
     background: black;
-    cursor: crosshair;
 }
 
 #white {
     background: white;
-    cursor: crosshair;
+}
+
+#color {
+    background: blue;
 }
