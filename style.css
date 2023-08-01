@@ -31,15 +31,3 @@ body {
 .square {
     cursor: crosshair;
 }
-
-#black {
-    background: black;
-}
-
-#white {
-    background: white;
-}
-
-#color {
-    background: blue;
-}
