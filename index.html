@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="title">Etch-a-Sketch</h1>
+           </div>
+
+        <div class="main">
+
+            <div>
+                <button id="write-button">write</button>
+                <button id="erase-button">erase</button>
+                <button id="color">color</button>
+            </div>
+
+            <div class="slide-container">
+                <input type="range" min="16" max="100" value="16" class="slider" id="square-range">
+                <p><span id="squares"></span></p>
+            </div>
+
+            <div class="square-container"></div>
+
+        </div>
+
+        <div class="footer">
+            <p>The Odin Project</p>
+        </div>
+    </body>
+</html>
