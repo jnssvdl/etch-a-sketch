@@ -9,18 +9,44 @@ function initialSquares(squareContainer, SQUARE_CONTAINER_WIDTH_HEIGHT) {
     }
 }
 
+function selectedMode(write, erase, color, mode) {
+    if (mode === 'write-button') {
+        write.style.backgroundColor = '#8FB0A9';
+        erase.style.backgroundColor = '#FBD266';
+        color.style.backgroundColor = '#FBD266';
+    } else if (mode === 'erase-button') {
+        write.style.backgroundColor = '#FBD266';
+        erase.style.backgroundColor = '#8FB0A9';
+        color.style.backgroundColor = '#FBD266';
+    } else {
+        write.style.backgroundColor = '#FBD266';
+        erase.style.backgroundColor = '#FBD266';
+        color.style.backgroundColor = '#8FB0A9';
+    }
+}
+
 function modes() {
-    // const write = document.getElementById('write-button');
-    // const erase = document.getElementById('erase-button');
-    // const color = document.getElementById('color-button');
+    const write = document.getElementById('write-button');
+    const erase = document.getElementById('erase-button');
+    const color = document.getElementById('color-button');
+
     // write.addEventListener('click', () => {
     //     mode = '#BFAA8C';
+    //     write.style.backgroundColor = '#FBD266'; // green
+    //     erase.style.backgroundColor = '#8FB0A9'; // yellow
+    //     color.style.backgroundColor = '#8FB0A9';
     // });
     // erase.addEventListener('click', () => {
     //     mode = '#F5F5DC';
+    //     write.style.backgroundColor = '#8FB0A9';
+    //     erase.style.backgroundColor = '#FBD266';
+    //     color.style.backgroundColor = '#8FB0A9';
     // });
     // color.addEventListener('click', () => {
     //     mode = 'color';
+    //     write.style.backgroundColor = '#8FB0A9';
+    //     erase.style.backgroundColor = '#8FB0A9';
+    //     color.style.backgroundColor = '#FBD266';
     // });
 
     // shorthand
@@ -28,6 +54,7 @@ function modes() {
     modeButtons.forEach((button) => {
         button.addEventListener('click', () => {
             mode = button.value;
+            selectedMode(write, erase, color, button.id);
         });
     });
 }
