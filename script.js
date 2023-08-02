@@ -10,7 +10,6 @@ function initialSquares(squareContainer, SQUARE_CONTAINER_WIDTH_HEIGHT) {
 }
 
 function modes() {
-
     const write = document.getElementById('write-button');
     const erase = document.getElementById('erase-button');
     const color = document.getElementById('color-button');
@@ -35,6 +34,7 @@ function modes() {
 
 // mouseover shade function
 function shade() {
+
     const gridCells = document.querySelectorAll('.square');
     gridCells.forEach((cell) => {
         cell.addEventListener('mouseover', () => {
@@ -45,6 +45,14 @@ function shade() {
             }
         });
     });
+}
+
+// makes all cells' color to #F5F5DC
+function reset() {
+    const gridCells = document.querySelectorAll('.square');
+    gridCells.forEach((cell) => {
+        cell.style.backgroundColor = '#F5F5DC';
+    })
 }
 
 function main() {
