@@ -57,8 +57,8 @@ body {
 }
 
 .square {
-    /* cursor: crosshair; */
-    border: 1px solid #E8DED1;
+    cursor: crosshair;
+    border: 0.000001px solid #E8DED1;
 }
 
 .settings {
