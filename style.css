@@ -18,6 +18,7 @@ body {
 }
 
 .header, .footer {
+    height: 20px;
     display: flex;
     justify-content: center;
 }
@@ -71,6 +72,7 @@ button {
     border-radius: 10px;
     background: #FBD266;
     border: none;
+    transition: .05s ease-in-out 0s;
 }
 
 button:hover {
@@ -80,4 +82,13 @@ button:hover {
 
 #reset-button {
     background: #9B2226;
+}
+
+#write-button, 
+#erase-button, 
+#color-button,
+#reset-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
