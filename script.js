@@ -64,7 +64,9 @@ function shade() {
     const gridCells = document.querySelectorAll('.square');
     gridCells.forEach((cell) => {
         cell.addEventListener('mouseover', event => {
-            console.log(event.buttons)
+            cell.ondragstart = function() {
+                return false;
+            }
             if (event.buttons === 1) {
                 try {
                     if (mode === 'color') {
