@@ -69,4 +69,8 @@ img {
 button {
     width: 40px;
     height: 40px;
+    border-radius: 10px;
+    background: #8FB0A9;
+    border-color: #8FB0A9;
+    /* background: #FBD266; */
 }

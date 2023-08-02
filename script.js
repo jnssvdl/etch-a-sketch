@@ -10,31 +10,30 @@ function initialSquares(squareContainer, SQUARE_CONTAINER_WIDTH_HEIGHT) {
 }
 
 function modes() {
-    const write = document.getElementById('write-button');
-    const erase = document.getElementById('erase-button');
-    const color = document.getElementById('color-button');
-    write.addEventListener('click', () => {
-        mode = '#BFAA8C';
-    });
-    erase.addEventListener('click', () => {
-        mode = '#F5F5DC';
-    });
-    color.addEventListener('click', () => {
-        mode = 'color';
-    });
+    // const write = document.getElementById('write-button');
+    // const erase = document.getElementById('erase-button');
+    // const color = document.getElementById('color-button');
+    // write.addEventListener('click', () => {
+    //     mode = '#BFAA8C';
+    // });
+    // erase.addEventListener('click', () => {
+    //     mode = '#F5F5DC';
+    // });
+    // color.addEventListener('click', () => {
+    //     mode = 'color';
+    // });
 
     // shorthand
-    // const modeButtons = document.querySelectorAll('.mode-button');
-    // modeButtons.forEach((button) => {
-    //     button.addEventListener('click', () => {
-    //         mode = button.value;
-    //     });
-    // });
+    const modeButtons = document.querySelectorAll('.mode-button');
+    modeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            mode = button.value;
+        });
+    });
 }
 
 // mouseover shade function
 function shade() {
-
     const gridCells = document.querySelectorAll('.square');
     gridCells.forEach((cell) => {
         cell.addEventListener('mouseover', () => {
