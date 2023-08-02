@@ -63,11 +63,18 @@ function modes() {
 function shade() {
     const gridCells = document.querySelectorAll('.square');
     gridCells.forEach((cell) => {
-        cell.addEventListener('mouseover', () => {
-            if (mode === 'color') {
-                cell.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}` // generates random color
-            } else {
-                cell.style.backgroundColor = mode;
+        cell.addEventListener('mouseover', event => {
+            console.log(event.buttons)
+            if (event.buttons === 1) {
+                try {
+                    if (mode === 'color') {
+                        cell.style.cursor = 'crosshair';
+                        cell.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}` // generates random color
+                    } else {
+                        cell.style.cursor = 'crosshair';
+                        cell.style.backgroundColor = mode;
+                    }
+                } catch {}
             }
         });
     });
