@@ -11,26 +11,26 @@ function initialSquares(squareContainer, SQUARE_CONTAINER_WIDTH_HEIGHT) {
 
 function modes() {
 
-    // const write = document.getElementById('write-button');
-    // const erase = document.getElementById('erase-button');
-    // const color = document.getElementById('color-button');
-    // write.addEventListener('click', () => {
-    //     mode = 'black';
-    // });
-    // erase.addEventListener('click', () => {
-    //     mode = 'white';
-    // });
-    // color.addEventListener('click', () => {
-    //     mode = 'color';
-    // });
-
-    const modeButtons = document.querySelectorAll('.mode-button');
-    modeButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            console.log(button.id)
-            mode = button.id;
-        });
+    const write = document.getElementById('write-button');
+    const erase = document.getElementById('erase-button');
+    const color = document.getElementById('color-button');
+    write.addEventListener('click', () => {
+        mode = '#BFAA8C';
     });
+    erase.addEventListener('click', () => {
+        mode = '#F5F5DC';
+    });
+    color.addEventListener('click', () => {
+        mode = 'color';
+    });
+
+    // shorthand
+    // const modeButtons = document.querySelectorAll('.mode-button');
+    // modeButtons.forEach((button) => {
+    //     button.addEventListener('click', () => {
+    //         mode = button.value;
+    //     });
+    // });
 }
 
 // mouseover shade function

@@ -8,29 +8,37 @@
         <script src="script.js" defer></script>
     </head>
     <body>
+
         <div class="header">
             <h1 class="title">Etch-a-Sketch</h1>
-           </div>
+        </div>
 
         <div class="main">
 
-            <div>
-                <button class="mode-button" id="black">write</button>
-                <button class="mode-button" id="white">erase</button>
-                <button class="mode-button" id="color">color</button>
-            </div>
+            <div class="container">
+                <div class="square-container"></div>
 
-            <div class="slide-container">
-                <input type="range" min="16" max="100" value="16" class="slider" id="square-range">
-                <p><span id="squares"></span></p>
-            </div>
+                <div class="settings">
+                    <div class="slide-container">
+                        <input type="range" min="16" max="100" value="16" class="slider" id="square-range">
+                        <p><span id="squares"></span></p>
+                    </div>
 
-            <div class="square-container"></div>
+                    <div>
+                        <button class="mode-button" id="write-button" value="black"><img src="assets/pencil-solid.png"></button>
+                        <button class="mode-button" id="erase-button" value="white"><img src="assets/eraser-solid.png"></button>
+                        <button class="mode-button" id="color-button" value="color"><img src="assets/paint-roller-solid.png"></button>
+                        <button><img src="assets/rotate-right-solid.png"></button>
+                    </div>
+                </div>
+    
+            </div>
 
         </div>
 
         <div class="footer">
             <p>The Odin Project</p>
         </div>
+
     </body>
 </html>
